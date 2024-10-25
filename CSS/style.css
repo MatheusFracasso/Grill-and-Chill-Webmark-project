@@ -1,0 +1,993 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 24px; /* Set the desired font size */
+    color: #000000; /* Set the text color if desired */
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold;
+    display: flex;
+    justify-content:center ;
+}
+
+h2{
+    font-size: 22px; /* Set the desired font size */
+    color: #000000; /* Set the text color if desired */
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 20px; /* Set the desired font size */
+    color: #000000; /* Set the text color if desired */
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: bold; 
+}
+
+p {
+    font-size: 16px; /* Set the desired font size */
+    color: #000000; /* Set the text color if desired */
+    margin: 10px 30px;
+    text-align:left;
+    font-weight: 500;
+    
+}
+
+li, a, button {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(216, 221, 207, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    flex-wrap: wrap; /* Ensure items wrap when necessary */
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* General Navigation Styles */
+.nav__links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease;
+}
+
+.nav__links li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgba(11, 42, 39, 1);
+    display: block;
+    margin: auto;
+}
+
+.nav__links li:hover::after {
+    width: 100%;
+}
+
+.nav__links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:rgb(45, 33, 13);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.cta  {
+    color: whitesmoke;
+    padding: 9px 25px;
+    background-color: rgb(45, 33, 13);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+   
+}
+
+.cta:hover {
+    background-color: rgb(139, 102, 0); /* Change background color on hover */
+    border-color: rgb(255, 255, 255);   /* Change border color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Ensure nav links wrap into new lines if the screen is too small */
+    .nav__links {
+        flex-wrap: wrap;
+        gap: 20px; /* Reduce gap between links for smaller screens */
+    }
+    .logo {
+        margin-bottom: 10px; 
+      
+    }
+    /* Adjust spacing for buttons and links */
+    button.cta {
+        width: 100%; /* Make the button take the full width on smaller screens */
+        text-align: center;
+    }
+
+    /* Stack logo and nav links vertically when screen size is very small */
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Align logo and nav links to the left */
+    }
+}
+
+
+
+
+.panelpic{
+    width: 100%; 
+    height: auto;
+    background-color: rgba(92, 147, 124, 1);
+    margin: 30px 0 0 0;  
+}
+
+
+
+
+.title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    margin: 30px;
+    padding: 20px;
+    text-align: center; /* Center text for better mobile readability */
+}
+
+.emphasis {
+    font-size: 3rem; /* Large text for larger screens */
+}
+
+/* Media query for smaller screens (tablets, mobile) */
+@media (max-width: 768px) {
+    .title-section {
+        height: auto; /* Let the height adjust based on content */
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .emphasis {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+}
+
+.title-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 30px;
+    padding: 20px;
+    text-align: center; /* Center text for better mobile readability */
+}
+
+.emphasis {
+    font-size: 3rem; /* Large text for larger screens */
+}
+
+/* Media query for smaller screens (tablets, mobile) */
+@media (max-width: 768px) {
+    .title-section1 {
+        height: auto; /* Let the height adjust based on content */
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .emphasis {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+}
+
+     
+
+
+
+
+
+
+
+.section1 {
+    display: flex;
+    background-color:rgba(92, 147, 124, 1);   
+    justify-content: center;
+    align-items: center; /* Align items at the top */
+    padding: 20px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+/* Style the image */
+.image {
+    width: 360px;
+    height: 380px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Style the text */
+.text {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Media query for tablet-sized screens */
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .image {
+        width: 300px; /* Scale down the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space between image and text */
+    }
+
+    .text {
+        width: 100%; /* Take up full width */
+        max-width: 100%;
+        text-align: center; /* Center the text for better readability */
+    }
+}
+
+
+.map-link {
+    color: #ffffff;                  /* Link color */
+    text-decoration: none;           /* Remove underline from links */
+                  /* Make the link bold */
+}
+
+.map-link:hover {
+    text-decoration: underline;      /* Underline on hover for clarity */
+}
+
+
+
+
+
+
+
+.text p {
+    font-size: 18px;            
+    color: #000000;
+    margin: 20px;                
+}
+
+
+
+
+
+
+
+
+
+
+.section2 {
+    display: flex;
+    background: #DADFD2;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center; /* Align items at the top */
+    padding: 20px;
+    margin: 30px;
+}
+
+/* Style the image */
+.image-2 {
+    width: 360px;
+    height: 380px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Style the text */
+.text {
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Media query for tablet-sized screens */
+@media (max-width: 768px) {
+    .section2 {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .image-2 {
+        width: 300px; /* Scale down the image */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space between image and text */
+    }
+
+    .text {
+        width: 100%; /* Take up full width */
+        max-width: 100%;
+        text-align: center; /* Center the text for better readability */
+    }
+}
+
+
+
+.section3 {
+    display: flex;
+    flex-direction: column;   
+    padding: 20px 15px;
+    gap: 5px;                 /* Space between each paragraph */
+    width: 100%;
+    max-width: 1179px;        /* Set max width for larger screens */
+    background: #D8DDCF;
+    border-radius: 15px;
+    font-size: 24px;
+    color: #000000;
+    margin: 30px auto;       
+}
+
+.imageTips {
+    width: 400px;         /* Set a fixed width */
+    height: 500px;
+    border-radius: 15px;        /* Set a fixed height */
+    object-fit: cover;    /* Ensure the images cover the area without distortion */
+    margin: 10px;         /* Add some spacing between images */
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+    .section3 {
+        padding: 15px 10px;     /* Reduce padding */
+        font-size: 20px;        /* Reduce font size */
+        width: 90%;             /* Make the section take up more space on smaller screens */
+    }
+}
+
+
+
+
+
+.section4 {
+    display: flex;
+    flex-direction: column;   /* Keep items stacked vertically */
+    padding: 20px 15px;       /* Padding around the section */
+    gap: 5px;                 /* Space between each paragraph */
+    width: 100%;              /* Make the width responsive */
+    max-width: 1179px;        /* Max width to avoid stretching too much on large screens */
+    background: rgba(92, 147, 124, 1); /* Keep the background color */
+    border-radius: 15px;      /* Rounded corners */
+    font-size: 24px;          /* Default font size for larger screens */
+    color: #000000;           /* Text color */
+    margin: 30px auto;        /* Center the section with automatic side margins */
+    text-align: center;       /* Center align text for better readability */
+}
+
+/* Media query for tablet screens */
+@media (max-width: 768px) {
+    .section4 {
+        font-size: 20px;      /* Reduce font size for smaller screens */
+        padding: 15px 10px;   /* Adjust padding for tablet-sized screens */
+        margin: 20px auto;    /* Reduce margin for more compact spacing */
+    }
+}
+
+.section10 {
+    display: flex;
+    justify-content: center;      /* Center the image horizontally */
+    padding: 20px;
+    margin: 30px;
+}
+
+.section10 .image {
+    width: 80%;       
+    margin:10vh;            /* Set a larger default size (80% of the container's width) */
+    max-width: 1200px;             /* Limit the maximum width to 600px */
+    height: auto;                 /* Keep the aspect ratio */
+    border-radius: 10px;          /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s ease-in-out;   /* Smooth transition for hover effects */
+}
+
+.section10 .image:hover {
+    transform: scale(1.45);       /* Slight zoom-in effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section10 .image {
+        width: 80%;               /* Make the image a bit smaller on tablets */
+        max-width: 500px;
+        margin: 20px;         /* Adjust the max width for tablets */
+    }
+}
+
+
+.section11 {
+    display: flex;
+    justify-content: center;      /* Center the image horizontally */
+    padding: 20px;
+}
+
+.section11 .image {
+    width: 80%;       
+    margin:5vh;            /* Set a larger default size (80% of the container's width) */
+    max-width: 1200px;             /* Limit the maximum width to 600px */
+    height: auto;                 /* Keep the aspect ratio */
+    border-radius: 10px;          /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s ease-in-out;   /* Smooth transition for hover effects */
+}
+
+.section11 .image:hover {
+    transform: scale(1.20);       /* Slight zoom-in effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section11 .image {
+        width: 90%;               /* Make the image a bit smaller on tablets */
+        max-width: 500px;         /* Adjust the max width for tablets */
+    }
+    .section11 .image:hover {
+        transform: scale(1.25);       /* Slight zoom-in effect on hover */
+    }
+}
+
+.section12 {
+    display: flex;
+    flex-direction: column;   
+    padding: 20px 15px;
+    gap: 5px;                 /* Space between each paragraph */
+    width: 100%;
+    max-width: 1179px;        /* Set max width for larger screens */
+    background: rgba(92, 147, 124, 1); /* Keep the background color */
+    border-radius: 15px;
+    font-size: 24px;
+    color: #000000;
+    margin: 10px auto;       
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+    .section12 {
+        padding: 15px 10px;     /* Reduce padding */
+        font-size: 20px;        /* Reduce font size */
+        width: 90%;             /* Make the section take up more space on smaller screens */
+    }
+}
+
+
+
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* Flexbox row for the footer layout */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+}
+
+/* General footer styles */
+.footer {
+    background: #DADFD2;
+    padding: 40px 0;
+}
+
+/* Columns for larger screens */
+.footer-col {
+    width: 25%; /* Width for desktop screens */
+    padding: 0 15px;
+    align-items: center;
+}
+
+/* Styling for list items */
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+/* Footer column with the logo and copyright */
+.footer-col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+/* Logo settings */
+.footer-col2 .logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Copyright text */
+.footer p {
+    font-size: 12px;
+    margin: 10px 0;
+    text-align: right;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+    .footer-col {
+        width: 45%; /* Reduce width of columns */
+        padding: 0 10px;
+    }
+    .footer-col2 {
+        align-items: center; /* Center-align for tablets */
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+    }
+}
+
+
+
+
+/*
+.border-text2 {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    padding: 15px 15px;
+    gap: 15px;            
+    border-radius: 10px;          
+    max-width: max-content;  /* Max width minus the margins (40px on each side) 
+    background-color: rgba(216, 221, 207, 1);
+    color: #000000;
+    text-align: center;          
+    margin: 40px;               
+*/
+.map-container {
+    display: flex;
+    justify-content: center;   /* Center the image container horizontally */
+    align-items: center;       /* Center the image container vertically */
+    height: 85vh;              /* Full viewport height */
+    padding: 20px;             /* Add padding around the container */
+}
+
+/* Style for the container around the image */
+.image-wrapper {
+    max-width: 800px;          /* Set a maximum width for the image container */
+    width: 100%;               /* Make the container responsive */
+    height: auto;
+    padding: 10px;             /* Optional: Add padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for better visual effect */
+    background-color: rgba(92, 147, 124, 1);    /* Optional: Add background color to the image container */
+    border-radius: 10px;       /* Optional: Rounded corners for the container */
+}
+
+/* Make the image responsive */
+.rules-panel {
+    max-width: 100%;           /* Ensure the image scales to the container width */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 10px;       /* Optional: Add rounded corners to the image itself */
+}
+
+/* Responsive adjustments */
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .map-container {
+        height: auto;          /* Let height adjust based on content */
+        padding: 10px;
+    }
+
+    .image-wrapper {
+        max-width: 90%;        /* Scale down the image container */
+    }
+}
+
+
+
+.map-container2 {
+    display: flex;
+    justify-content: center;   /* Center the image container horizontally */
+    align-items: center;       /* Center the image container vertically */
+    height: 70vh;              /* Full viewport height */
+    padding: 20px;             /* Add padding around the container */
+}
+
+/* Style for the container around the image */
+.image-wrapper {
+    max-width: 800px;          /* Set a maximum width for the image container */
+    width: 100%;               /* Make the container responsive */
+    height: auto;
+    padding: 10px;             /* Optional: Add padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add shadow for better visual effect */
+    background-color: rgba(92, 147, 124, 1);    /* Optional: Add background color to the image container */
+    border-radius: 10px;       /* Optional: Rounded corners for the container */
+}
+
+/* Make the image responsive */
+.rules-panel {
+    max-width: 100%;           /* Ensure the image scales to the container width */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 10px;       /* Optional: Add rounded corners to the image itself */
+}
+
+/* Responsive adjustments */
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .map-container2 {
+        height: 50vh;          /* Let height adjust based on content */
+        padding: 10px;
+        
+    }
+
+    .image-wrapper {
+        max-width: 90%;        /* Scale down the image container */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.map {
+    display: block;              /* Remove flex from the image itself */
+    padding: 15px;               /* Add padding inside the border */
+    margin: 20px;                /* Margin to create space around the image */
+    border: 5px solid rgba(92, 147, 124, 1); /* Beautiful border */
+    border-radius: 15px;         /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 70%;              /* Set a width for responsiveness */
+       
+}
+.writing-info{
+  
+    padding: 20px 15px;
+    width: fit-content;
+    background: rgba(92, 147, 124, 1);
+    border-radius: 15px;
+    font-size: 24px;
+    color: #000000;
+    margin: 30px auto;        
+}
+
+   .bbqspot1-title {
+    padding: 25px;             
+    border-radius: 15px;         
+    width: fit-content;  
+    height: auto;              
+    background-color: rgba(92, 147, 124, 1);
+    color:#000000;
+    margin: 30px auto; 
+}
+
+.bbqspot1-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    flex-wrap: wrap;                  /* Allow wrapping for smaller screens */
+}
+
+.bbqspot1-pic img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;                     /* Adjust margins for better spacing */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; /* Keep the hover effect smooth */
+}
+
+.bbqspot1-pic img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bbqspot1-pic img {
+        width: 200px;                 /* Reduce image size for tablets */
+        height: 200px;
+    }
+}
+
+
+
+.grill-items-table {
+    max-width: 800px;               /* Limit the width of the table */
+    margin: 0 auto;                 /* Center the table horizontally */
+    padding: 20px;                  /* Add padding around the table for spacing */
+}
+
+.grill-items-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'outfit', sans-serif;
+    border-radius: 15px 15px 0 0;             /* Add border-radius to the table */
+    overflow: hidden;               /* Ensure the content fits within rounded borders */
+}
+
+.grill-items-table th, .grill-items-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;         /* Normal 1px border for table cells */
+}
+
+.grill-items-table th {
+    background-color: rgba(216, 221, 207, 1);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.grill-items-table a {
+    color: rgba(9, 41, 34, 1);
+    text-decoration: none;
+}
+
+.grill-items-table a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grill-items-table table, 
+    .grill-items-table thead, 
+    .grill-items-table tbody, 
+    .grill-items-table th, 
+    .grill-items-table td, 
+    .grill-items-table tr {
+        display: block;
+    }
+
+    .grill-items-table thead {
+        display: none;
+    }
+
+    .grill-items-table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .grill-items-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .grill-items-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+.image-gallery {
+    display: flex;                        /* Enable flexbox */
+    justify-content: center;              /* Center images horizontally */
+    align-items: center;                  /* Center images vertically */
+    flex-wrap: wrap;                      /* Allow wrapping of items */
+    padding: 20px;                       /* Add some padding */
+}
+
+/* Image styles */
+.gallery-image {
+    width: 100%;                          /* Set image width to 100% of the container */
+    max-width: 300px;
+    height: 400px;                    /* Limit maximum width */
+    margin: 10px;                        /* Margin around each image */
+    border-radius: 10px;                 /* Optional: rounded corners for images */
+    transition: transform 0.3s;          /* Transition for hover effect */
+}
+
+/* Hover effect */
+.gallery-image:hover {
+    transform: scale(1.05);              /* Scale image slightly on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-image {
+        max-width: 90%;                   /* Make images larger on smaller screens */
+    }
+}
+
+
+/*BBQRULES 5*/
+.rules-panel{
+    width:auto;    /* Center vertically */
+    height: auto;           /* Full viewport height */
+}
+
+.rule-footer-pic {
+    display: flex;
+    gap: 0;
+  }
+
+.rule-footerpic {
+    width: 50%;
+    height: 50%;
+}
+
+
+
+.section21 {
+
+    text-align: center;                /* Center align text */
+    padding: 20px;    
+    background: rgba(92, 147, 124, 1);    max-width: max-content;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+.p21 {
+    font-size: 16px;   
+                   /* Font size for caption */
+}
+
+/* Form Styles */
+.section22 {
+    display: flex;                    /* Enable flexbox for centering */
+    justify-content: center;          /* Center the form horizontally */
+    padding: 20px;                   /* Padding around the section */
+}
+
+.form {
+    background-color:  rgba(216, 221, 207, 1);       /* Light background color for the form */
+    border: 1px solid #ddd;           /* Light border */
+    border-radius: 10px;     /* Rounded corners only on top */
+    padding: 20px;                    /* Padding inside the form */
+    width: 100%;                      /* Full width */
+    max-width: 600px;                 /* Max width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+label {
+    display: block;                   /* Block display for labels */
+    margin: 10px 0 5px;              /* Spacing around labels */
+}
+
+.radiobutton {
+    display: flex;                    /* Enable flexbox for radio button section */
+    align-items: center;              /* Center items vertically */
+}
+
+.title-label {
+    margin-right: 10px;               /* Space between title and radio buttons */
+}
+
+.choice {
+    display: inline-block;            /* Aligns items horizontally */
+    margin-right: 20px;              /* Spacing between the choices */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;                     /* Full width for inputs */
+    padding: 10px;                   /* Padding for inputs */
+    margin-bottom: 10px;             /* Spacing below inputs */
+    border: 1px solid #ccc;          /* Light border */
+    border-radius: 5px;              /* Rounded corners */
+}
+
+input[type="submit"] {
+    background-color: rgba(92, 147, 124, 1);      /* Button background color */
+    color: white;                    /* Button text color */
+    border: none;                    /* Remove border */
+    padding: 10px 15px;              /* Padding inside the button */
+    border-radius: 5px;              /* Rounded corners */
+    cursor: pointer;                  /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(92, 147, 124, 1);      /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .h21 {
+        font-size: 20px;              /* Smaller font size on small screens */
+    }
+
+    .p21 {
+        font-size: 14px;              /* Smaller font size for caption */
+    }
+
+    .form {
+        padding: 15px;                /* Less padding on smaller screens */
+    }
+}
+
+.image {
+    width: 400px;                   /* Fixed width for images */
+    height: auto;                   /* Maintain aspect ratio */
+    margin: 10vh 10px;                 /* Horizontal spacing between images */
+    border-radius: 15px;            /* Rounded corners for images */
+}
+
+/* Image Container */
+.image-section {
+    display: flex;                   /* Enable flexbox for the image section */
+    justify-content: center;         /* Center the images horizontally */
+    flex-wrap: wrap;                /* Allow wrapping of images */
+}
+
+/* Responsive Design for Images */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column;      /* Change layout to column on smaller screens */
+        align-items: center;         /* Center the images horizontally */
+    }
+
+    .image {
+        width: 100%;                 /* Full width for images on smaller screens */
+        max-width: 300px;            /* Max width for images */
+        margin: 5vh 0;              /* Vertical spacing between images */
+    }
+}
